@@ -50,8 +50,9 @@ img,svg{display:block;max-width:100%}
 .wrap{max-width:var(--mx);margin:0 auto;padding:0 var(--g);position:relative}
 .mono{font-family:var(--f-mono);letter-spacing:.02em}
 
-/* corner tick marks — 4 L-brackets (blueprint style) */
-.ticks{position:absolute;inset:0;pointer-events:none;opacity:.35;
+/* Section-level ticks disabled — corners applied on cards directly instead */
+.ticks{display:none}
+.ticks-legacy{position:absolute;inset:0;pointer-events:none;opacity:.35;
   background-image:
     linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor),
     linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor),
