@@ -71,6 +71,28 @@ img,svg{display:block;max-width:100%}
   color:var(--ink);
 }
 
+/* Corner brackets on individual cards/tiles (blueprint frame feel) */
+.f{position:relative}
+.sv::before,.f::before,.pcard::after{
+  content:"";position:absolute;inset:-6px;pointer-events:none;opacity:.55;color:var(--accent);
+  background-image:
+    linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor),
+    linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor),
+    linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor),
+    linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor);
+  background-repeat:no-repeat;
+  background-size:
+    12px 1.5px,1.5px 12px,
+    12px 1.5px,1.5px 12px,
+    12px 1.5px,1.5px 12px,
+    12px 1.5px,1.5px 12px;
+  background-position:
+    top left,top left,
+    top right,top right,
+    bottom left,bottom left,
+    bottom right,bottom right;
+}
+
 .nav{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--paper) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line-2)}
 .ni{display:flex;align-items:center;justify-content:space-between;height:64px}
 .logo{display:flex;align-items:center;gap:12px;font-family:var(--f-serif);font-weight:500;font-size:22px;letter-spacing:-.01em}
