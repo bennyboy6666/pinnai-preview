@@ -73,8 +73,8 @@ img,svg{display:block;max-width:100%}
 }
 
 /* Corner brackets on individual cards/tiles (blueprint frame feel) */
-.f{position:relative}
-.sv::before,.f::before,.pcard::after,.h-vis::before{
+.f,.tl{position:relative}
+.sv::before,.f::before,.pcard::after,.tl::before,.su::after{
   content:"";position:absolute;inset:-6px;pointer-events:none;opacity:.55;color:var(--accent);
   background-image:
     linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor),
@@ -255,7 +255,7 @@ h2.st .em{font-style:italic;color:var(--accent)}
 @media(max-width:900px){.sg{grid-template-columns:1fr;border:none;gap:16px}}
 .sv{padding:28px;border-right:1px solid var(--line-2);display:flex;flex-direction:column;background:var(--paper);transition:background .2s;position:relative}
 @media(max-width:900px){.sv{border:1.5px solid var(--ink)}}
-.sv:last-child{border-right:none}
+@media(min-width:901px){.sv:last-child{border-right:none}}
 .sv:hover{background:var(--paper-2)}
 .sv .nm{font-family:var(--f-mono);font-size:10.5px;color:var(--accent);margin-bottom:28px;text-transform:uppercase;letter-spacing:.1em;display:flex;justify-content:space-between}
 .sv .nm::after{content:"";flex:1;margin-left:10px;height:1px;background:var(--line);align-self:center}
